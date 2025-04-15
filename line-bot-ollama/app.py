@@ -8,7 +8,7 @@ from linebot.v3.webhooks import MessageEvent, TextMessageContent
 app = Flask(__name__)
 configuration = Configuration(access_token='Ztz/W+Bz54YIL2jWPIwnjZ1gDm64eezkJD8cHjDhGNJzpkhtbm7nf9hIVousFFYNyKCbbY4ctb1wEwFha5WGmCt6f0sZQENbO8PgByvhtnMixSC7XadofI1MnaYq+gmtRmiiOokS+NVqwkdLLgKYRwdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('fd28e86bbe3b02b212cd7b8975bc9281')
-OLLAMA_API_URL = 'OLLAMA_URL/api/chat'  # 稍後更新為 Ollama 的 Render URL
+OLLAMA_API_URL = 'https://ollama-service-v6b3.onrender.com'  # 稍後更新為 Ollama 的 Render URL
 
 @app.route("/callback", methods=['POST'])
 def callback():
