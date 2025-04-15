@@ -27,7 +27,7 @@ def handle_message(event):
     with ApiClient(configuration) as api_client:
         try:
             response = requests.post(OLLAMA_API_URL, json={
-                'model': 'gemma3:4b',
+                'model': 'gemma:2b',
                 'messages': [{'role': 'user', 'content': event.message.text}]
             }).json()
             reply_text = response['message']['content'].strip()
